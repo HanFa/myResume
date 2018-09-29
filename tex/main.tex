@@ -149,11 +149,11 @@
         \resumeSubheading{Web Systems}{Ann Arbor, MI}{Insta485 Website Development}{Jan. 2018 -- Apr. 2018}{0}
         Recreate the dynamic Instagram website passing all test cases, including:
         \begin{itemize}
-          \item Sqlite3 as database, Flask for the server-side framework
-          \item React for the client side framework
-          \item A search engine ranked on articles' \href{https://en.wikipedia.org/wiki/Tf%E2%80%93idf}{tf-idf} calculated by Hadoop streaming using mapreduce algorithm
+          \item Sqlite3 as user database. Flask for the server-side framework which maintains user sessions and handles different requests such as manage accounts and post photos
+          \item React for the client side framework to manage states for each web component. Other \texttt{npm} packages \texttt{infinite-scroll} to provider users with more seamless experience
+          \item A search engine for article Wiki, ranked on \href{https://en.wikipedia.org/wiki/Tf%E2%80%93idf}{tf-idf}. The index was calculated using parallelized mapreduce algorithm, supported by Hadoop streaming
         \end{itemize}
-        \methodsTools{Webstorm IDE, Python3, Flask, React, Hadoop MR Streaming}
+        \methodsTools{JetBrain Webstorm, Python3, Flask, React, Hadoop MR Streaming, \texttt{npm}}
 
         \resumeSubheading{Operating Systems}{Ann Arbor, MI}{Thread Library, Pager, File Systems}{Jan. 2018 -- Apr. 2018}{0}
         Implement operating system kernel and pass all test cases, including:
