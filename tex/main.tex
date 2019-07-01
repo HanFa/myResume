@@ -35,8 +35,8 @@
     \addtolength{\oddsidemargin}{-0.375in}
     \addtolength{\evensidemargin}{-0.375in}
     \addtolength{\textwidth}{1in}
-    \addtolength{\topmargin}{-.5in}
-    \addtolength{\textheight}{1.0in}
+    \addtolength{\topmargin}{-.6in}
+    \addtolength{\textheight}{0.9in}
     
     \urlstyle{same}
     
@@ -62,91 +62,69 @@
         \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
           \textbf{#1} & #2 \\
           \textit{\small#3} & \textit{\small #4} \\
-        \end{tabular*}\vspace{#5 pt}
+        \end{tabular*} \vspace{#5 pt}
+    }
+
+    \newcommand{\projectHeading}[2]{
+      \item
+        \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+          \textbf{#1} & \textit{\small #2} \\
+        \end{tabular*}
     }
     
-    \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
-    \newcommand{\methodsTools}[1]{\textbf{\faCog: } #1}
+
+
     \renewcommand{\labelitemii}{$\circ$}
     
     \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
     \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-    \newcommand{\resumeItemListStart}{\begin{itemize}}
-    \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
     
+
     %-------------------------------------------
     %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
     
     \begin{document}
-    
+    % \footnote{Compiled at \today.}
+
     %----------HEADING-----------------
     \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{\href{https://www.linkedin.com/in/fang-han-368b1a124/}{\Large Fang Han}} & \\ 
+      \textbf{\href{https://www.linkedin.com/in/fang-han-368b1a124/}{\Large Fang Han}}  & \\ 
       \faLinkedin \  \href{https://www.linkedin.com/in/fang-han-368b1a124/}{https://www.linkedin.com/in/fang-han-368b1a124/} & \faMobilePhone \  +1-734-680-3913 \\
       \faGithub \ \href{https://github.com/HanFa}{https://github.com/HanFa} & \Letter  \  \href{mailto:hanfa@umich.edu}{hanfa@umich.edu} \\
-      \faGlobe \ \href{http://hanfa.me}{http://hanfa.me} &
     \end{tabular*}
-    \vspace{0.5em}
-    
     %-----------SELFINTRO-----------------
-    I have received Computer Science bachelor's degrees in December 2018. I am a quick learner and have a strong foundation on algorithm designs, operating systems, networks and web systems. Currently, I am actively seeking software engineering positions and research opportunities.
 
+  
    %-----------EDUCATION-----------------
    \section{\faBook Education}
    \resumeSubHeadingListStart
      \resumeSubheading
-       {\href{http://www.umich.edu}{University of Michigan}}{Ann Arbor, MI}
-       {Computer Science B.S.E 3.86/4.00}{Sept. 2016 -- Dec. 2018}{-5}
-       \begin{itemize}
-         \item All semesters University Honors \& Dean's List
-         \item Game Design Project: 
-           \begin{itemize}
-             \item Recreate Zelda NES version using Unity in C\# together with a customized level individually
-             \item Develop a rhythm shooter game: \href{http://www.hanfa.me/projects/index.html#opera-a-rhythm-shooter-game}{\textit{Ultimate Opera Fight}}
-           \end{itemize}
-         
-         
-         \item Computer Architecture Capstone Design Project: Design and Implement a 3-way-superscalar R10k pipeline microprocessor using System Verilog. Validate and synthesize the microprocessor architecture
-       \end{itemize}
-     \resumeSubheading
+       {University of Michigan}{Ann Arbor, MI}
+       {Computer Science B.S.E 3.85/4.00}{Sept. 2016 -- Dec. 2018}{-5}
+       Focus: Machine Learning, Web Systems, Embedding Systems, Operating Systems, Data Structure \& Algorithms
+      \resumeSubheading
        {\href{http://umji.sjtu.edu.cn/global/}{UM-SJTU Joint Institute} at Shanghai Jiao Tong University}{Shanghai, China}
        {Electrical and Computer Engineering B.S.E 3.60/4.00}{Sept. 2014 -- Aug. 2018}{-5}
-       \begin{itemize}
-         \item Outstanding Undergraduate Scholarship \& Dean's List
-         \item Software Capstone Design: \href{http://www.hanfa.me/projects/index.html#justgo-integrated-virtual-vehicle-simulation-platform-on-android}{\textit{Vehicle Simulation Platform On Android}} provides the in-vehicle software developers with handy utilities such as dashboard display panels, mock location providers and other operational interfaces
-       \end{itemize}
+       Focus: Methods and Tools for Big Data, Cryptography, Computer Programming
    \resumeSubHeadingListEnd
 
 
-
     %-----------EXPERIENCE-----------------
-    \section{\faShoppingBag Research Experience}
+    \section{\faShoppingBag Work Experience}
     \resumeSubHeadingListStart
     \resumeSubheading
-    {Attack Lidar using EMI}{Ann Arbor, MI}
-    {SPQR Lab Assistant}{Jan. 2019 - Present}{-5}
+    {Affect LiDAR with EMI}{Ann Arbor, MI}
+    {Research Intern $\vert$ SPQR Lab}{Jan. 2019 - Present}{-5}
     \begin{itemize}
-      \item Visualize point clouds in threejs to analyze the effect of electromagnetic interference on Lidar
-      \item Propose adversarial machine learning attack methods against Apollo CNN segmentation model
-      \item Expose the vulnerability of Apollo CNN model under certain electromagnetic interference, as validated in the software level
-    \end{itemize}
-
-
-    \resumeSubheading
-    {Edge Computing Research}{Ann Arbor, MI}
-    {System Lab Assistant}{Sept. 2018 - Present}{-5}
-    \begin{itemize}
-      \item Implement a remote computation architecture for augmented windshield display and facial recognition
-      \item Apply the idea of edge computing to stateful applications and evaluate their network performance in terms of latency. Reduce the overhead in cross-nodes data migration using previsioning
+      \item Exposed the vulnerabilities in LiDAR-based 3D obstacle detection algorithms when sensors are under electromagnetic interference. Simulate, predict, and confirm a decision alteration in high-level autopilot system. Deploy the simulation program using Docker containers in remote AWS servers.
+      \item Built a stand-alone visualization solution for point cloud files in the mainstream format (\textit{.pcd}). Visualized the LiDAR traces and interference using OpenGL with the library Three.js.
     \end{itemize}
 
     \resumeSubheading
     {Stack-structured L-Tage Branch Predictor}{Ann Arbor, MI}
-    {Computer Architecture Research Assistant}{Jun. 2017 - Feb. 2018}{-5}
+    {Undergraduate Research Assistant $\vert$ CADRE Lab}{Jun. 2017 - Feb. 2018}{-5}
     \begin{itemize}
-      \item Write gem5 C++ source code of a stack-structured branch predictor inherited from L-Tage
-      \item Validate different implementations and evaluate the performance in terms of prediction correct rates and instructions per second. Obtain a 3\% performance boost when the new structure is enabled in certain program counters
-      \item Tackle technical and programming problems for research lab-mates
+      \item Developed and validated a novel stack-based branch predictor inherited from L-Tage exploiting the computer architecture research platform (\textit{gem5}). Achieved an average 3 \%  boosts with the SPEC2006 test suit in KIPS.
     \end{itemize}
     \resumeSubHeadingListEnd
 
@@ -154,77 +132,32 @@
 
     %-----------PROJECTS-----------------
     \section{\faCogs Projects}
-      \resumeSubHeadingListStart
-        \resumeSubheading{Distributed Computing \& Data Mining}{Shanghai, China}{\href{https://labrosa.ee.columbia.edu/millionsong/}{Million Song Dataset} Analysis}{Jun. 2018 -- Sept. 2018}{-5}
-        \begin{itemize}
-          \item Exploit open-source distributed computing (\href{https://hadoop.apache.org/}{Apache\textsuperscript{TM} Hadoop}) to analyse the entire 280GB dataset
-          \item Extract the data in \texttt{.btf} by a customized storage plugin for \href{https://drill.apache.org/}{Drill}
-          \item Apply data analysis on the artist locations and music style. Document the findings in \LaTeX
-        \end{itemize}
-        \methodsTools{R Studio, Hadoop Ecosystem, Data Visualization, \LaTeX}
+    \resumeSubHeadingListStart
+      \projectHeading{Game: \textit{Ultimate Opera Fight} (MDE)}{Oct. 2018 -- Dec. 2018} \\
+      Developed, playtested, and showcased a multiplayer, first-person, rhythm shooting game with Unity3D (C\#). Polished the game iteratively with feedbacks from project milestones. Managed and collaborated using Gantt charts and real-time dashboards.
 
-        \resumeSubheading{Web Systems}{Ann Arbor, MI}{Insta485 Website Development}{Jan. 2018 -- Apr. 2018}{0}
-        Recreate the dynamic Instagram website passing all test cases, including:
-        \begin{itemize}
-          \item Sqlite3 as user database. Flask for the server-side framework which maintains user sessions and handles different requests such as manage accounts and post photos
-          \item React for the client side framework to manage states for each web component. Other \texttt{npm} packages \texttt{infinite-scroll} to provider users with more seamless experience
-          \item A search engine for article Wiki, ranked on \href{https://en.wikipedia.org/wiki/Tf%E2%80%93idf}{tf-idf}. The index was calculated using parallelized mapreduce algorithm, supported by Hadoop streaming
-        \end{itemize}
-        \methodsTools{JetBrain Webstorm, Python3, Flask, React, Hadoop MR Streaming, \texttt{npm}}
+      \projectHeading{Integrated Virtual Vehicle Simulation Platform on Android: \textit{Just Go} (MDE)}{Jun. 2018 -- Aug. 2018}
+      Developed and presented an Android simulation platform to simplify the debugging process for location-related Carplay applications. Populated with plugins like the fake location generator, virtual driving dashboards, and joystick control driver.
+      
+      \projectHeading{Data Mining and Analysis on Big Data}{Jun. 2018 – Aug. 2018}
+      Structured, clean, and perform regression analysis on the 280GB Million Song Dataset within a 4-node HDFS cluster. Wrote a customized storage plugin for Apache Drill to extract data from \texttt{.btf} raw format. 
 
-        \resumeSubheading{Operating Systems}{Ann Arbor, MI}{Thread Library, Pager, File Systems}{Jan. 2018 -- Apr. 2018}{0}
-        Implement operating system kernel and pass all test cases, including:
-        \begin{itemize}
-          \item Multithreading library above the provided hardware interface
-          \item OS pager for memory management
-          \item Multiple-user, tree-structured and remote-accessible file system          
-        \end{itemize}
-        \methodsTools{GNU Thread Library, Sockets, C++}
+      \projectHeading{Full Stack: \textit{Insta485}}{Jan. 2018 -- Apr. 2018}
+      Developed and deployed a dynamic photo sharing websites with features like account management,a news feed, and infinite page scroll on AWS. Improved front-end experience with React components for \texttt{like} buttons and comment boxes. Designed a relational schema for the \texttt{user}, \texttt{post}, and \texttt{like}. Persisted user data by connecting the Flask framework to the SQLite database.
 
-        \resumeSubheading{Embedded Systems Design}{Ann Arbor, MI}{Package Sorting Robot}{Sept. 2017 -- Dec. 2017}{0}
-        Build a \href{http://www.hanfa.me/projects/index.html#package-sorting-robot}{package sorting robot} within a 4-member team, featured in:
-        \begin{itemize}
-          \item High efficiency and accuracy of packages classification compared with traditional human sorting process
-          \item Automatic processing pipeline including delivering (conveyor belt), sorting (camera color detection and object classification), packing (bridge crane and controller) and monitoring (LCD display)
-        \end{itemize}
-        \methodsTools{SmartFusion FPGA, Fault Tolerant Algorithm Design, UART Protocol Programming}
+      \projectHeading{Deep Dive in Operating Systems}{Jan. 2018 -- Apr. 2018}
+      Implemented from scratch a multithreading library (\texttt{mutex} and \texttt{cv}), a paging memory management systems, and a multiuser, tree-structured, remote file system using sockets and POSIX threads. Our implementation passed 100\% test cases.
 
-      \resumeSubHeadingListEnd
-    
-    %
-    %--------Courses------------
-    \section{\faBookmark Courses}
-    \begin{tabular}{p{7cm}p{7cm}l}
-      Database Management System & Computer Networks & Computer Game Design \\
-      Methods and Tools for Big Data & Intro to Cryptography & Intro to Operating Systems \\
-      Web Systems & Intro to Machine Learning & Embedded Systems \\
-      Data Structures \& Algorithms & Computer Architecture \& VLSI Design & Digital Signal Processing
-    \end{tabular}
 
-    %
-    %--------PROGRAMMING SKILLS------------
-    \section{\faTerminal Skills}
-     \resumeSubHeadingListStart
-       \item \textbf{Generals}{: Independent Research, Software Programming, Teamwork, Techical Communication}
-       \item \textbf{Languages}{: 
-        \begin{itemize}
-          \item $\geq 10000$ lines: Java, C/C++, Python, C\#, HTML, System Verilog
-          \item $\geq 1000$ lines: Javascript, R, SQL, Matlab
-          \item Familiar with: Bash, Mathematica
-        \end{itemize}
-       }
-       \item \textbf{Technologies \& Softwares}{: Unix, Hadoop ecosystem (Mapreduce, Drill, Spark, Avro), React, Flask, Android Studio,Unity, FPGA Programming,  \LaTeX, Git, OpenCV, TensorFlow, Sklearn, gem5}
-     \resumeSubHeadingListEnd
-    
-    %
-    %--------Languages & Hobbies------------
-    \section{\faSoccerBallO Languages \& Interests}
-    \begin{itemize}
-      \item Fully proficient in English technical communication and a Madarin native speaker
-      \item Interested in game design and looking for Unity game-dev fellows to cooperate
-      \item Skillful in \href{https://en.wikipedia.org/wiki/Go_(game)}{Go(Weiqi)} and badminton
-    \end{itemize}
+      \projectHeading{Embedding System Design: \textit{Wanmei Package Sorting Robot}}{Oct. 2017 -- Dec. 2017}
+      Built a package sorting robot with an Arm Cortex-M3 processor (SmartFusion FPGA). Enable UART communications among peripherals like motors (a conveyor belt and a bridge crane), LCDs and a camera. Won the best project award.
+    \resumeSubHeadingListEnd
 
-    %-------------------------------------------
+    \section{\faTerminal Tech Stack}
+    \textbf{Languages:} Proficient in Python, C++, Javascript, SQL and Java. Familiar with MATLAB, R, Ruby and C\#. \\
+    \textbf{Frameworks:} Android, Flask, Jinja, ReactJS, Electron, \texttt{npm}, Bootstrap, JQuery, Rails. \\
+    \textbf{DevOps:} Docker, Swarm, AWS, Git and Unix Bash. \\
+
+
     \end{document}
     
